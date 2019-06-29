@@ -1,0 +1,45 @@
+@font-face {
+
+  font-family: 'MicrosoftYaHei';
+
+  src: url('../font/MicrosoftYaHei.eot'); /* IE9 Compat Modes */
+
+  src: url('../font/MicrosoftYaHei.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+
+  /*url('../font/MicrosoftYaHei.woff') format('woff'), !* Modern Browsers *!*/
+
+  url('../font/MicrosoftYaHei.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  /*url('../font/MicrosoftYaHei.svg#MicrosoftYaHei') format('svg'); !* Legacy iOS *!*/
+
+}
+/*ios 系统
+
+默认中文字体是Heiti SC
+
+默认英文字体是Helvetica
+
+默认数字字体是HelveticaNeue
+
+无微软雅黑字体
+
+android 系统
+
+默认中文字体是Droidsansfallback
+
+默认英文和数字字体是Droid Sans
+
+无微软雅黑字体
+
+winphone 系统
+
+默认中文字体是Dengxian(方正等线体)
+
+默认英文和数字字体是Segoe
+
+无微软雅黑字体
+
+作者：caikunhai
+链接：https://www.jianshu.com/p/9e5a6ebd848a
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。*/
