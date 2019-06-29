@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>跨浏览器控制图片旋转jquery插件</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+</head>
+<body>
+	<div class="jq22-container">
+
+		<div class="container">
+			<div class="row" style="margin-top: 20px;">
+				<div class="col-md-4">
+					<h4>示例一：图片旋转</h4>
+					<img src="img/internet-explorer_64x64.png" id="img1" alt="">
+				</div>
+				<div class="col-md-8">
+					<pre>
+$("#img").rotate(45);
+//或者
+$("#img").rotate({angle: 45});						
+					</pre>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h4>示例二：鼠标滑过旋转</h4>
+					<img src="img/safari_64x64.png" id="img2" alt="">
+				</div>
+				<div class="col-md-8">
+					<pre>
+$("#img").rotate({
+  bind:
+  {
+    mouseover : function() {
+    $(this).rotate({animateTo:180})
+  },
+  mouseout : function() {
+    $(this).rotate({animateTo:0})
+    }
+  }
+
+});						
+					</pre>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h4>示例三：图片无限旋转</h4>
+					<img src="img/chrome_64x64.png" id="img3" alt="">
+				</div>
+				<div class="col-md-8">
+					<pre>
+var angle = 0;
+setInterval(function(){
+  angle+=3;
+$("#img").rotate(angle);
+},50);					
+					</pre>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h4>示例四：图片无限旋转（使用回调函数）</h4>
+					<img src="img/internet-explorer_64x64.png" id="img4" alt="">
+				</div>
+				<div class="col-md-8">
+					<pre>
+var rotation = function (){
+  $("#img").rotate({
+    angle:0,
+    animateTo:360,
+    callback: rotation
+  });
+}
+rotation();					
+					</pre>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h4>示例六：图片无限旋转（使用回调函数并自定义easing动画）</h4>
+					<img src="img/safari_64x64.png" id="img5" alt="">
+				</div>
+				<div class="col-md-8">
+					<pre>
+var rotation = function (){
+  $("#img").rotate({
+    angle:0,
+    animateTo:360,
+    callback: rotation,
+    easing: function (x,t,b,c,d){ // t: current time, b: begInnIng value, c: change In value, d: duration
+      return c*(t/d)+b;
+    }
+  });
+}
+rotation();					
+					</pre>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h4>示例六：点击图片旋转（使用jquery.easing插件）</h4>
+					<img src="img/chrome_64x64.png" id="img6" alt="">
+				</div>
+				<div class="col-md-8">
+					<pre>
+$("#img").rotate({
+  bind:
+  {
+    click: function(){
+      $(this).rotate({ angle:0,animateTo:180,easing: $.easing.easeInOutExpo })
+    }
+  }
+});					
+					</pre>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h4>示例七：点击图片旋转指定的角度</h4>
+					<img src="img/internet-explorer_64x64.png" id="img7" alt="">
+				</div>
+				<div class="col-md-8">
+					<pre>
+var value = 0
+$("#img").rotate({
+  bind:
+  {
+    click: function(){
+      value +=90;
+      $(this).rotate({ animateTo:value})
+    }
+  }
+});					
+					</pre>
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jQueryRotate.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//示例一
+			$("#img1").rotate(45);
+			//示例二
+			$("#img2").rotate({
+			  bind:
+			  {
+			    mouseover : function() {
+			    $(this).rotate({animateTo:180})
+			  },
+			  mouseout : function() {
+			    $(this).rotate({animateTo:0})
+			    }
+			  }
+
+			});
+			//示例三
+			var angle = 0;
+			  setInterval(function(){
+			    angle+=3;
+			  $("#img3").rotate(angle);
+			  },50);
+
+			 //示例4
+			 var rotation = function (){
+			  $("#img4").rotate({
+			    angle:0,
+			    animateTo:360,
+			    callback: rotation
+			  });
+			}
+			rotation();
+
+			//示例5
+			var rotation = function (){
+			  $("#img5").rotate({
+			    angle:0,
+			    animateTo:360,
+			    callback: rotation,
+			    easing: function (x,t,b,c,d){       
+			      return c*(t/d)+b;
+			    }
+			  });
+			}
+			rotation();
+
+			//示例6
+			$("#img6").rotate({
+			  bind:
+			  {
+			    click: function(){
+			      $(this).rotate({ angle:0,animateTo:180,easing: $.easing.easeInOutExpo })
+			    }
+			  }
+
+			});
+
+			//示例7
+			var value = 0
+			$("#img7").rotate({
+			  bind:
+			  {
+			    click: function(){
+			      value +=90;
+			      $(this).rotate({ animateTo:value})
+			    }
+			  }
+			});
+
+		})	
+	</script>
+
+</body>
+</html>
