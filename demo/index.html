@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<input value="OK">
+
+<p id="demo">点击下面的按钮来设置按钮的类型属性。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction(){
+	document.getElementsByTagName("INPUT")[0].setAttribute("type","button"); 
+};
+</script>
+<p>Internet Explorer 8 及更早的版本不支持 setAttribute 方法。</p>
+
+</body>
+</html>
