@@ -1,0 +1,35 @@
+{
+  "name": "mip",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mipengine/mip2.git"
+  },
+  "keywords": [
+    "mip",
+    "mip2"
+  ],
+  "scripts": {
+    "lint": "npm run lint:mip && npm run lint:cli && npm run lint:validator && npm run lint:sandbox",
+    "lint:mip": "eslint packages/mip/src",
+    "lint:cli": "eslint packages/mip-cli/lib",
+    "lint:validator": "eslint packages/mip-component-validator/src",
+    "lint:sandbox": "eslint packages/mip-sandbox/lib"
+  },
+  "author": "sfe-sy@baidu.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mipengine/mip2/issues"
+  },
+  "homepage": "https://github.com/mipengine/mip2#readme",
+  "devDependencies": {
+    "babel-plugin-transform-builtin-classes": "^0.6.1",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "eslint": "^5.0.0-alpha",
+    "eslint-config-standard": "^12.0.0-alpha",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
+  }
+}

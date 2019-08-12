@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="utf-8">
+    <title>MIP Data Page</title>
+    <meta name="keywords" content="vue,mip,store">
+    <meta name="description" content="mip-store">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style mip-custom>
+        body {
+            padding: 30px;
+        }
+    .main-content .link {
+        text-align: center;
+        margin-top: 20px;
+        display: block;
+    }
+    .main-content p,
+    .main-content .button {
+        width: 150px;
+        display: inline-block;
+        margin: 20px 0 0 20px;
+    }
+    .mip-complevel1 {
+        border: 1px solid red;
+        padding: 4px;
+    }
+    .mip-complevel2 {
+        border: 1px solid blue;
+        padding: 4px;
+        margin: 6px 0;
+    }
+    .mip-complevel2 h3 {
+        margin-bottom: 10px;
+    }
+    .mip-complevel2 p {
+        margin-bottom: 12px;
+    }
+    .mip-complevel2 ul {
+        margin: 0 0 12px 20px;
+    }
+    .click-btn {
+        color: white;
+        background: #ff8e3d;
+        padding: 3px;
+        display: inline-block;
+        margin-top:8px;
+    }
+    </style>
+</head>
+
+<body>
+    <mip-data>
+        <script type="application/json">
+            {
+              "name": "hbb",
+              "loading": false,
+              "list": [],
+              "num": 47,
+              "#userInfo": {}
+            }
+        </script>
+    </mip-data>
+
+    <!-- props example -->
+    <mip-complevel1 m-bind:class="{loading: loading}" m-bind:user-info="userInfo"></mip-complevel1>
+    <br />
+    <mip-complevel2 m-bind:user-info="userInfo" m-bind:msg="name" m-bind:loading="loading" m-bind:list="list" m-bind:num="num"></mip-complevel2>
+    
+    <script src="../../dist/mip.js"></script>
+    <!-- <script src="https://bos.nj.bpc.baidu.com/assets/mip/projects/mip.js"></script>  -->
+    <script src="./components/mip-complevel2.js"></script>
+    <script src="./components/mip-complevel1.js"></script>
+
+</body>

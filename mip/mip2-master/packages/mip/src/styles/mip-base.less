@@ -1,0 +1,222 @@
+@import "./variable.less";
+* {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-size-adjust: none;
+  text-size-adjust: none;
+  font: 14px Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow-x: hidden;
+  &.with-header {
+    padding-top: @shell-header-height;
+  }
+}
+
+html,
+body {
+  // height: 100% !important;
+  overflow-y: auto;
+  position: relative;
+  &.trigger-layout {
+    height: 100% !important;
+  }
+}
+
+html.mip-i-ios-width {
+  min-width: 100%;
+  width: 1px;
+}
+
+html.mip-i-ios-scroll,
+html.mip-i-ios-scroll>body[mip-ready] {
+  -webkit-overflow-scrolling: touch;
+}
+
+html.mip-i-android-scroll,
+body.mip-i-android-scroll {
+  height: auto !important;
+  overflow-y: visible;
+  position: static;
+  -webkit-overflow-scrolling: auto !important;
+}
+
+html.mip-no-scroll,
+html.mip-no-scroll>body {
+  height: 100% !important;
+  position: relative;
+  overflow: hidden;
+}
+
+
+[on^="click:"] {
+  cursor: pointer
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+template {
+  display: none;
+}
+
+span[id^="cnzz_stat"] {
+  display: none;
+}
+
+mip-i-space {
+  display: block;
+  opacity: 0;
+  height: 0;
+}
+
+.mip-layout-relative {
+  display: block;
+  position: relative;
+}
+
+.mip-fill-content {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.mip-i-space .mip-fill-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.mip-layout-fixed {
+  display: inline-block;
+  position: relative;
+}
+
+.mip-layout-responsive {
+  display: block;
+  position: relative;
+}
+
+.mip-layout-intrinsic {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+
+  .mip-i-space {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.mip-i-intrinsic-space {
+  max-width: 100%;
+  display: block !important;
+}
+
+.mip-layout-fixed-height {
+  display: block;
+  position: relative;
+}
+
+.mip-layout-container {
+  display: block;
+  position: relative;
+}
+
+.mip-layout-fill {
+  display: block;
+  overflow: hidden !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.mip-layout-flex-item {
+  display: block;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.mip-hidden-by-media-query {
+  display: none !important;
+}
+
+.mip-layout-size-defined {
+  overflow: hidden !important;
+}
+
+.mip-fill-content {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.mip-layout-size-defined .mip-fill-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.mip-replaced-content {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.mip-hidden {
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.mip-hide {
+  display: none !important;
+}
+
+mip-script {
+  display: none !important;
+}
+
+// placeholder fallback
+.mip-element>[placeholder],[layout]:not(.mip-element)>[placeholder] {
+  display: block;
+}
+
+// .mip-element.mip-notsupported>.mip-replaced-content {
+//   visibility: hidden !important;
+// }
+
+.mip-element>[placeholder].mip-hidden,.mip-element>[placeholder].hidden {
+  visibility: hidden;
+}
+
+// .mip-element:not(.mip-notsupported)>[fallback] {
+//   display: none;
+// }
+
+.mip-layout-size-defined>[fallback],.mip-layout-size-defined>[placeholder] {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1;
+}

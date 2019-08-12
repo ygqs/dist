@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" mip>
+<!--htmlcs-disable-->
+<head>
+    <title>MIP Shell IS 1</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <style mip-custom>
+    .link {
+        text-align: center;
+        margin-top: 20px;
+        display: block;
+    }
+    #button {
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background: #22f;
+        color: white;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body>
+    <mip-shell-is mip-shell>
+        <script type="application/json">
+        {
+            "routes": [
+                {
+                    "pattern": "mip-shell-is-1.html",
+                    "meta": {
+                        "header": {
+                            "show": true
+                        },
+                        "view": {
+                            "isIndex": false
+                        }
+                    }
+                },
+                {
+                    "pattern": "*",
+                    "meta": {
+                        "header": {
+                            "show": true
+                        }
+                    }
+                }
+            ],
+            "isId": 123
+        }
+        </script>
+    </mip-shell-is>
+
+    <p>This is MIP SHELL IS 1</p>
+
+    <mip-tree>
+        <script type="application/json">
+            {"model":{"name":"My Tree","children":[{"name":"hello"},{"name":"wat"},{"name":"child folder","children":[{"name":"child folder","children":[{"name":"hello"},{"name":"wat"}]},{"name":"hello"},{"name":"wat"},{"name":"child folder","children":[{"name":"hello"},{"name":"wat"}]}]}]}}
+        </script>
+    </mip-tree>
+
+    <a class="link" href="./mip-shell-is-2.html" mip-link>Go to MIP SHELL IS 2</a>
+    <div id="button">By viewer.open</div>
+
+    <script src="../../dist/mip.js"></script>
+    <script src="./components/mip-tree.js"></script>
+    <script src="./components/mip-shell-is.js"></script>
+
+    <script>
+        document.querySelector('#button').addEventListener('click', () => {
+            window.MIP.viewer.open('./mip-shell-is-2.html')
+        })
+    </script>
+</body>
+
+</html>

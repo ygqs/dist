@@ -1,0 +1,14 @@
+# mip
+packages/mip/src/vue
+packages/mip/deps
+packages/mip/build
+packages/mip/dist
+packages/mip/examples
+
+# mip-cli
+packages/mip-cli/test
+
+# mip-sandbox
+packages/mip-sandbox/deps
+
+node_modules

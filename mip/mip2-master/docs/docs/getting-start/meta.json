@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {
+      "key": "newbie"
+    },
+    {
+      "key": "start-writing-first-mip"
+    },
+    {
+      "key": "debug-and-validate"
+    },
+    {
+      "key": "migrate-v1-to-v2"
+    }
+  ]
+}

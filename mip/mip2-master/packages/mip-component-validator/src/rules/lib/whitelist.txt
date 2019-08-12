@@ -1,0 +1,16 @@
+blueimp-md5
+echarts
+fastclick
+iscroll
+lodash
+mip-sandbox
+moment
+better-scroll
+xzh-sdk
+nib
+fe-siteopen-sdk
+@baidu/fe-siteopen-sdk
+@baidu/guid
+web-animations-js
+vue-lottery
+mustache
