@@ -1,0 +1,62 @@
+{
+  "name": "calendar",
+  "version": "0.4.1",
+  "description": "一个简单实用的日历控件！支持日期、月份和年份试图切换；支持单选、多选、范围和星期选择模式；界面简介、配置简单、使用方便！",
+  "main": "calendar.js",
+  "scripts": {
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "connect": "gulp connect",
+    "compile": "gulp compile",
+    "dev": "gulp dev",
+    "lint": "gulp lint",
+    "start": "gulp start",
+    "watch": "gulp watch"
+  },
+  "keywords": [
+    "javascript",
+    "calendar"
+  ],
+  "author": "Robert Yao",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-modules-umd": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "babel-polyfill": "^6.26.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.3.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-pug-lint": "^0.1.6",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-umd": "^2.0.0",
+    "node-sass": "^4.12.0",
+    "pump": "^3.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/env"
+          ]
+        }
+      ]
+    ]
+  }
+}
