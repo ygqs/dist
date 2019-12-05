@@ -34,7 +34,8 @@
     "pages/about/test/filter",
     "pages/about/home/home",
     "pages/plugin/drawer/drawer",
-    "pages/plugin/verticalnav/verticalnav"
+    "pages/plugin/verticalnav/verticalnav",
+    "pages/details/details"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",
